@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fountain | Graphic Designer</title>
+<meta name="description" content="Graphic designer in Accra, Ghana. Brand identity, posters, social media design and packaging.">
+<meta property="og:title" content="Fountain | Graphic Designer">
+<meta property="og:description" content="Brand identity, print and social design from Accra.">
+<meta name="theme-color" content="#0a0b1e">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230a0b1e'/><circle cx='42' cy='50' r='22' fill='%23ff4fa3'/><circle cx='60' cy='50' r='22' fill='%237a5cff' fill-opacity='.8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0b1e; --card:#13152f; --text:#f1eefb; --muted:#9d9bbd; --line:rgba(241,238,251,.14);
+  --pink:#ff4fa3; --violet:#7a5cff; --aqua:#3de0d0; --lemon:#f3f06b;
+  --serif:'Instrument Serif',Georgia,serif; --sans:'Hanken Grotesk',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;font-size:1.05rem;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--aqua);outline-offset:4px}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.glow{position:fixed;left:0;top:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;background:radial-gradient(circle,rgba(122,92,255,.22),transparent 65%);pointer-events:none;z-index:0;transition:opacity .4s}
+
+/* nav */
+header{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:20;display:flex;gap:6px;padding:6px;border-radius:999px;background:rgba(19,21,47,.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line)}
+header a{text-decoration:none;font-weight:500;font-size:.92rem;padding:9px 18px;border-radius:999px;color:var(--muted);transition:.25s}
+header a:hover{color:var(--text);background:rgba(255,255,255,.08)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:120px var(--pad) 80px;overflow:hidden;isolation:isolate}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);z-index:-1;opacity:.75;will-change:transform}
+.o1{width:46vw;height:46vw;max-width:640px;max-height:640px;background:var(--violet);right:-8%;top:6%}
+.o2{width:34vw;height:34vw;max-width:480px;max-height:480px;background:var(--pink);right:18%;bottom:-6%}
+.o3{width:22vw;height:22vw;max-width:300px;max-height:300px;background:var(--aqua);right:34%;top:12%;opacity:.5}
+.role{color:var(--muted);font-size:1.05rem;margin-bottom:12px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(5rem,23vw,22rem);line-height:.85;letter-spacing:-.045em;white-space:nowrap;user-select:none;margin-left:-.04em}
+.hero h1 span{display:inline-block;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.hero h1 span.it{font-style:italic;transform:translateY(-.03em)}
+.tag{max-width:34ch;margin-top:clamp(24px,4vw,48px);font-size:clamp(1.15rem,1.8vw,1.45rem);line-height:1.45;color:#d8d4ee}
+.cta{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;padding:15px 28px;border-radius:999px;font-weight:500;font-size:1rem;text-decoration:none;font-family:var(--sans);cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--text);transition:.3s}
+.btn.solid{background:var(--text);color:var(--bg);border-color:var(--text)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px -10px rgba(255,79,163,.6)}
+.scroll{position:absolute;left:var(--pad);bottom:28px;width:1px;height:48px;background:linear-gradient(var(--text),transparent);animation:drip 2.4s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* load sequence (the one orchestrated moment) */
+.hero .role,.hero .tag,.hero .cta{opacity:0;transform:translateY(18px);animation:up .9s .9s forwards cubic-bezier(.2,.8,.2,1)}
+.hero .tag{animation-delay:1.05s}.hero .cta{animation-delay:1.2s}
+.hero h1 span{opacity:0;transform:translateY(40%);animation:up .9s forwards cubic-bezier(.2,.8,.2,1)}
+@keyframes up{to{opacity:1;transform:none}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:22px 0;position:relative;z-index:1}
+.track{display:inline-flex;gap:48px;animation:slide 32s linear infinite;font-family:var(--serif);font-size:clamp(1.8rem,3.4vw,2.8rem);font-style:italic;color:var(--muted)}
+.track b{font-weight:400;color:var(--pink);font-style:normal}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{position:relative;z-index:1;padding:clamp(80px,12vw,170px) var(--pad)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.8rem,6.5vw,5.5rem);line-height:.95;letter-spacing:-.03em}
+h2 em{color:var(--pink)}
+
+/* work */
+.work-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:28px;margin-bottom:56px}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{font-family:var(--sans);font-weight:500;font-size:.9rem;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:.25s}
+.filters button:hover{color:var(--text)}
+.filters button[aria-pressed=true]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.grid{column-count:2;column-gap:clamp(20px,3vw,44px)}
+.card{display:block;width:100%;break-inside:avoid;margin-bottom:clamp(36px,5vw,72px);background:none;border:0;text-align:left;font:inherit;color:inherit;cursor:pointer;perspective:900px}
+.card[hidden]{display:none}
+.art{position:relative;aspect-ratio:5/4;border-radius:14px;overflow:hidden;transition:transform .25s ease-out,box-shadow .4s;transform-style:preserve-3d;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.card:hover .art{box-shadow:0 40px 80px -30px rgba(122,92,255,.5)}
+.art.has-img{aspect-ratio:auto;background:var(--card)}
+.art img{width:100%;height:auto;display:block}
+.art::after{content:"View";position:absolute;right:16px;bottom:16px;padding:8px 16px;border-radius:999px;background:rgba(10,11,30,.7);backdrop-filter:blur(8px);font-size:.85rem;font-weight:500;opacity:0;transform:translateY(8px);transition:.3s}
+.card:hover .art::after,.card:focus-visible .art::after{opacity:1;transform:none}
+.meta{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+.meta h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.1;letter-spacing:-.01em}
+.meta p{color:var(--muted);font-size:.95rem;white-space:nowrap}
+
+/* placeholder cover art (mesh gradients) */
+.a1{background:radial-gradient(circle at 25% 30%,var(--pink),transparent 55%),radial-gradient(circle at 80% 75%,var(--violet),transparent 55%),#1b0f3a}
+.a2{background:radial-gradient(circle at 70% 25%,var(--aqua),transparent 50%),radial-gradient(circle at 20% 80%,var(--violet),transparent 55%),#06223a}
+.a3{background:radial-gradient(circle at 30% 70%,var(--lemon),transparent 50%),radial-gradient(circle at 75% 30%,var(--pink),transparent 55%),#3a0f2a}
+.a4{background:radial-gradient(circle at 75% 70%,var(--aqua),transparent 50%),radial-gradient(circle at 25% 25%,var(--lemon),transparent 45%),#0b3a35}
+.a5{background:radial-gradient(circle at 50% 20%,var(--violet),transparent 55%),radial-gradient(circle at 50% 90%,var(--pink),transparent 55%),#14103a}
+.a6{background:radial-gradient(circle at 20% 25%,var(--aqua),transparent 50%),radial-gradient(circle at 85% 80%,var(--pink),transparent 50%),#101a3a}
+.art[class*=" a"]::before{content:"";position:absolute;inset:18%;border:1px solid rgba(255,255,255,.35);border-radius:50%;transform:translateZ(30px)}
+
+/* lightbox */
+dialog{border:1px solid var(--line);border-radius:18px;max-width:min(920px,92vw);width:100%;padding:0;background:var(--card);color:var(--text);margin:auto}
+dialog::backdrop{background:rgba(5,6,18,.82);backdrop-filter:blur(6px)}
+dialog .art{border-radius:0;aspect-ratio:16/10;box-shadow:none}dialog .art.has-img{aspect-ratio:auto;max-height:72vh;overflow:auto}dialog .art::after{display:none}
+.dlg-body{padding:28px 32px 34px}.dlg-body h3{font-family:var(--serif);font-weight:400;font-size:2.4rem;line-height:1.05}
+.dlg-body p{color:var(--muted);margin-top:8px;max-width:56ch}.dlg-body form{margin-top:22px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(36px,7vw,110px);border-top:1px solid var(--line)}
+.about p{max-width:56ch;color:#d3cfea;font-size:1.15rem}.about p+p{margin-top:1.1em}
+.services{list-style:none;margin-top:44px}
+.services li{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:20px 0;border-top:1px solid var(--line);transition:padding .3s}
+.services li:last-child{border-bottom:1px solid var(--line)}
+.services li:hover{padding-left:14px}
+.services strong{font-family:var(--serif);font-weight:400;font-size:1.7rem}
+.services span{color:var(--muted);font-size:.95rem;text-align:right}
+
+/* contact */
+.contact{text-align:center;border-top:1px solid var(--line);overflow:hidden}
+.contact .mail{display:inline-block;font-family:var(--serif);font-size:clamp(2rem,8.5vw,8rem);line-height:1;letter-spacing:-.04em;margin:34px 0 44px;text-decoration:none;word-break:break-word;background:linear-gradient(90deg,var(--text),var(--pink),var(--violet),var(--text));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;transition:background-position .8s}
+.contact .mail:hover{background-position:100% 0}
+.links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+footer{position:relative;z-index:1;padding:28px var(--pad);color:var(--muted);font-size:.88rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line)}
+
+@media(max-width:760px){
+  .grid{column-count:1}
+  .about{grid-template-columns:1fr}
+  .services li{flex-direction:column;gap:2px}.services span{text-align:left}
+  header a{padding:8px 13px}
+  .meta p{white-space:normal}
+  .glow{display:none}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.hero .role,.hero .tag,.hero .cta,.hero h1 span{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<header aria-label="Main">
+  <a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+</header>
+
+<main>
+<section class="hero" style="padding-top:120px;padding-bottom:80px">
+  <div class="orb o1" data-d="30"></div><div class="orb o2" data-d="-45"></div><div class="orb o3" data-d="60"></div>
+  <p class="role">Graphic designer</p>
+  <h1 id="name" aria-label="Fountain"></h1>
+  <p class="tag">I design brands, posters and social campaigns with a clear idea behind every shape.</p>
+  <div class="cta"><a class="btn solid" href="#work">See my work</a><a class="btn" href="#contact">Start a project</a></div>
+  <div class="scroll" aria-hidden="true"></div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<section id="work">
+  <div class="work-head">
+    <h2>Selected <em>work</em></h2>
+    <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="about" class="about">
+  <h2>Design that<br>feels <em>considered</em></h2>
+  <div>
+    <p>I'm a graphic designer based in Manchester, UK. I work with founders, churches, musicians and small businesses who need a look that fits who they are and holds up everywhere it appears, from a phone screen to a printed banner.</p>
+    <p>Every project starts with a conversation, then sketches, then a tight set of options. You get organised files that are ready to use.</p>
+    <ul class="services">
+      <li><strong>Brand identity</strong><span>Logo, colour, type, guidelines</span></li>
+      <li><strong>Print and posters</strong><span>Flyers, banners, programmes, packaging</span></li>
+      <li><strong>Social media design</strong><span>Templates, campaigns, covers</span></li>
+      <li><strong>Illustration and layout</strong><span>Editorial, book and slide design</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Have a project <em>in mind?</em></h2>
+  <a class="mail" href="mailto:hello@yourdomain.com">fountainolurombi7@gmail.com</a>
+  <div class="links">
+    <a class="btn" href="https://linkedin.com/in/fountain-olurombi-3385652a9/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</section>
+</main>
+
+<footer><span>&copy; <span id="yr"></span> Fountain</span><span>Manchester, UK</span></footer>
+
+<dialog id="dlg" aria-label="Project details">
+  <div id="dlg-art"></div>
+  <div class="dlg-body">
+    <h3 id="dlg-title"></h3><p id="dlg-desc"></p>
+    <form method="dialog"><button class="btn">Close</button></form>
+  </div>
+</dialog>
+
+<script>
+/* ===== EDIT YOUR PROJECTS HERE =====
+   img: path to an image in this folder (e.g. "img/logo-1.jpg"). Leave "" to show the placeholder art (art: 1 to 6). */
+const PROJECTS = [
+  {title:"Kente & Co. identity", cat:"Branding", desc:"Logo, colour system and packaging for a handmade fabric label.", img:"img/kente.png", art:1},
+  {title:"Sunday Service posters", cat:"Print", desc:"A weekly poster set built from one flexible layout.", img:"img/sunday.jpg", art:2},
+  {title:"Save The Date", cat:"Social", desc:"Launch graphics for a wedding event.", img:"img/std.jpg", art:3},
+  {title:"Harvest coffee labels", cat:"Branding", desc:"Three bag labels sharing one illustrated system.", img:"img/harvest.png", art:4},
+  {title:"Fitness studio kit", cat:"Social", desc:"Post and reel templates the team edits in Canva.", img:"img/movement.png", art:5}
+];
+const SERVICES=["Brand identity","Posters","Social campaigns","Packaging","Illustration","Layout"];
+
+const $=id=>document.getElementById(id), grid=$('grid'), filters=$('filters'), dlg=$('dlg');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(pointer:fine)').matches;
+const artHTML=p=>p.img?`<div class="art has-img"><img src="${p.img}" alt="${p.title}" loading="lazy"></div>`:`<div class="art a${p.art}" role="img" aria-label="${p.title} cover"></div>`;
+
+grid.innerHTML=PROJECTS.map((p,i)=>`<button class="card" data-i="${i}" data-cat="${p.cat}">${artHTML(p)}<div class="meta"><h3>${p.title}</h3><p>${p.cat}</p></div></button>`).join('');
+[...new Set(['All',...PROJECTS.map(p=>p.cat)])].forEach((c,i)=>{
+  const b=document.createElement('button');b.textContent=c;b.setAttribute('aria-pressed',i===0);
+  b.onclick=()=>{filters.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+    grid.querySelectorAll('.card').forEach(k=>k.hidden=!(c==='All'||k.dataset.cat===c));};
+  filters.append(b);
+});
+grid.addEventListener('click',e=>{
+  const k=e.target.closest('.card');if(!k)return;const p=PROJECTS[k.dataset.i];
+  $('dlg-art').innerHTML=artHTML(p);$('dlg-title').textContent=p.title;$('dlg-desc').textContent=p.desc;dlg.showModal();
+});
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+
+/* marquee */
+const row=SERVICES.map(s=>`<span>${s}</span><b>&#10022;</b>`).join('');
+$('track').innerHTML=row.repeat(4);
+
+/* hero name: letters stagger in, then lean into italic near the pointer */
+const h=$('name');
+const L=[...'Fountain'].map((ch,i)=>{const s=document.createElement('span');s.textContent=ch;s.setAttribute('aria-hidden','true');
+  s.style.animationDelay=(.15+i*.07)+'s';h.append(s);return s});
+if(!reduce&&fine){
+  const orbs=[...document.querySelectorAll('.orb')], glow=$('glow');
+  addEventListener('pointermove',e=>{
+    glow.style.transform=`translate(${e.clientX}px,${e.clientY}px)`;
+    const nx=e.clientX/innerWidth-.5, ny=e.clientY/innerHeight-.5;
+    orbs.forEach(o=>{const d=+o.dataset.d;o.style.transform=`translate(${nx*d*-2}px,${ny*d*-2}px)`});
+    L.forEach(s=>{const r=s.getBoundingClientRect();
+      s.classList.toggle('it',Math.hypot(e.clientX-(r.left+r.width/2),e.clientY-(r.top+r.height/2))<r.width*1.1)});
+  });
+  /* 3D tilt on cards */
+  grid.addEventListener('pointermove',e=>{
+    const a=e.target.closest('.card')?.querySelector('.art');if(!a)return;const r=a.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    a.style.transform=`rotateY(${x*8}deg) rotateX(${-y*8}deg) scale(1.02)`;
+  });
+  grid.addEventListener('pointerout',e=>{const a=e.target.closest('.card')?.querySelector('.art');if(a)a.style.transform=''});
+}
+$('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
